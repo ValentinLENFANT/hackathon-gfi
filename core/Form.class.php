@@ -4,25 +4,53 @@
 
 
  	public static $adduser = [
- 		"config" => ["method"=>"POST", "action"=> "user/add" ],
+ 		"config" => [
+                            "method"=>"POST",
+                            "action"=> "user/add"
+                ],
  		"data" => [
-			 			"email"=>["type"=>"email", "required"=>true, "placeholder"=>"Votre email", "error"=>"Email incorrect", "unicite" => ["table"=>"Users", 
-			 												"column"=>"email", 
-			 												"error"=>"L'email existe déjà dans notre base"] 
-							],
-
-			 			"pwd"=>["type"=>"password", "required"=>true, "placeholder"=>"Votre mot de passe", "error"=>"Mot de passe incorrect"],
-			 			"pwd2"=>["type"=>"password", "required"=>true, "confirm"=>"pwd", "placeholder"=>"Confirmation", "error"=>"Mot de passe de confirmation incorrect"],
-
-
-			 			"country"=>["type"=>"select", "options"=>["fr"=>"France", "it"=>"Italie", "es"=>"Espagne"] , "error"=>"Pays incorrect"],
-
-
-			 			"captcha"=>["type"=>"captcha", "error"=>"Captcha incorrect"],
-
-
-			 			["type"=>"submit", "value"=>"S'inscrire", "noverification"=>true]
-			 		]
+			   "email"=>[
+                                     "type"=>"email",
+                                     "required"=>true,
+                                     "placeholder"=>"Votre email",
+                                     "error"=>"Email incorrect",
+                                     "unicite" => [
+                                                    "table"=>"Users", 
+                                                    "column"=>"email", 
+                                                    "error"=>"L'email existe déjà dans notre base"] 
+				     ],
+			   "pwd"=>[
+                                    "type"=>"password",
+                                    "required"=>true,
+                                    "placeholder"=>"Votre mot de passe",
+                                    "error"=>"Mot de passe incorrect"
+                            ],
+			    "pwd2"=>[
+                                "type"=>"password",
+                                "required"=>true, 
+                                "confirm"=>"pwd",
+                                "placeholder"=>"Confirmation",
+                                "error"=>"Mot de passe de confirmation incorrect"
+                            ],
+                            "country"=>[
+                                "type"=>"select",
+                                "options"=>[
+                                    "fr"=>"France",
+                                    "it"=>"Italie",
+                                    "es"=>"Espagne"
+                                    ],
+                                "error"=>"Pays incorrect"
+                            ],
+                            "captcha"=>[
+                                "type"=>"captcha",
+                                "error"=>"Captcha incorrect"
+                            ],
+                            [
+                            "type"=>"submit",
+                            "value"=>"S'inscrire",
+                            "noverification"=>true
+                            ]
+			]
 
  	];
 
@@ -30,11 +58,11 @@
 	public static $loguser = [
 	 		"config" => ["method"=>"POST", "action"=> "user/log" ],
 	 		"data" => [
-	 						"email"=>["type"=>"email", "required"=>true, "placeholder"=>"Votre email","error"=>"Email incorrect"] ,
-			 				"pwd"=>["type"=>"password", "required"=>true, "placeholder"=>"Votre mot de passe", "error"=>"Mot de passe incorrect"],
-			 				["type"=>"submit", "value"=>"Se connecter", "noverification"=>true]
-	 					]
-	 				];
+	 			    "email"=>["type"=>"email", "required"=>true, "placeholder"=>"Votre email","error"=>"Email incorrect"] ,
+			 	    "pwd"=>["type"=>"password", "required"=>true, "placeholder"=>"Votre mot de passe", "error"=>"Mot de passe incorrect"],
+			 	    ["type"=>"submit", "value"=>"Se connecter", "noverification"=>true]
+	 		]
+	];
 
 
 
@@ -56,19 +84,18 @@
  			}
  			//VERIFICATION DU FORMAT DE L'EMAIL
  			else if(
- 						trim($data[$name]) != "" && 
- 						$options["type"] == "email" && 
- 						!filter_var($data[$name], FILTER_VALIDATE_EMAIL) 
+ 				trim($data[$name]) != "" && 
+ 				$options["type"] == "email" && 
+ 				!filter_var($data[$name], FILTER_VALIDATE_EMAIL) 
  					){
  				$error = true;
  				$msgError[] = $options["error"];
  			}
  			//VERIFICATION DU FORMAT DU MOT DE PASSE
- 			else if(
- 						trim($data[$name]) != "" && 
- 						$options["type"] == "password" && 
- 						(strlen($data[$name])<8 || strlen($data[$name])>12)
- 					){
+ 			else if(trim($data[$name]) != "" && 
+ 				$options["type"] == "password" && 
+ 				(strlen($data[$name])<8 || strlen($data[$name])>12))
+                        {
  				$error = true;
  				$msgError[] = $options["error"];
  			}
