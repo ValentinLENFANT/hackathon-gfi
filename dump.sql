@@ -40,21 +40,6 @@ CREATE TABLE `applicant` (
   `admin` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Contenu de la table `applicant`
---
-
-INSERT INTO `applicant` (`id`, `firstname`, `lastname`, `email`, `phoneNumber`, `address`, `skills`, `pwd`, `dateNaissance`, `gender`, `admin`) VALUES
-(1, NULL, NULL, 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '1234', '2017-04-28', NULL, NULL),
-(2, NULL, NULL, 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '1234', '2017-04-28', NULL, NULL),
-(3, NULL, NULL, 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '1234', '2017-04-28', NULL, NULL),
-(4, NULL, NULL, 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '1234', '2017-04-28', NULL, NULL),
-(5, NULL, NULL, 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '1234', '2017-04-27', NULL, NULL),
-(6, NULL, NULL, 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '1234', '2017-04-27', NULL, NULL),
-(7, NULL, NULL, 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '12233', '2017-04-20', NULL, NULL),
-(8, NULL, '', 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '12233', '2017-04-20', NULL, NULL),
-(9, NULL, '', 'sanaebelhaj1@gmail.com', NULL, NULL, NULL, '1234', '2017-04-27', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
