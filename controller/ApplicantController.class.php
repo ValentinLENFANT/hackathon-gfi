@@ -22,7 +22,7 @@ class ApplicantController{
                     "type" => "text",
                     "validation" => "text",
                     "value" => '',
-                    "label" => 'Nom Prénom',
+                    "label" => 'Prénom Nom',
                     "labelClass" => '',
                     "class" => 'validate',
                     "div_class" => 'input-field'
@@ -88,9 +88,8 @@ class ApplicantController{
     }
     public function inscrireAction($args){
         $data = $this->inscriptionForm->validate();
-        var_dump($data['name']);
         if(isset($data['name'])){
-           $name[] = explode(" ", $data['name']);
+           $name = explode(" ", $data['name']);
            if(isset($name[0])){
                 $firtname = $name[0];
            }else{
@@ -108,7 +107,7 @@ class ApplicantController{
         if($data && !$data['error']['error']){
             $applicant = new Applicant();
             $applicant_data = [
-                "firtname" => $firtname ,
+                "firstname" => $firtname ,
                 "lastname" => $lastname,
                 "email" => $data['email'],
                 "pwd" => $data['pwd'],
@@ -116,7 +115,7 @@ class ApplicantController{
             ];
           //  Logger::debug($data);
             $applicant->fromArray($applicant_data);
-           // $applicant->save();
+            $applicant->save();
         }
         $view = new View();
         $view->setView('inscriptionView');
