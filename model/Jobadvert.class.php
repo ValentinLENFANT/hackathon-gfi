@@ -5,6 +5,8 @@ class Jobadvert extends Entity{
 	protected $wording;
 	protected $description;
 	protected $skills;
+	protected $idDomain;
+	protected $idEnigme;
 
 
 	public function __construct($wording=null, $description=null, $skills = null){
@@ -31,6 +33,14 @@ class Jobadvert extends Entity{
             return $this->skills;
         }
 
+        function getIdDomain() {
+            return $this->idDomain;
+        }
+
+        function getIdEnigme() {
+            return $this->idEnigme;
+        }
+
         function setId($id) {
             $this->id = $id;
         }
@@ -47,6 +57,13 @@ class Jobadvert extends Entity{
             $this->skills = $skills;
         }
 
+        function setIdDomain($idDomain) {
+            $this->idDomain = $idDomain;
+        }
+
+        function setIdEnigme($idEnigme) {
+            $this->idEnigme = $idEnigme;
+        }
 
 
 }
