@@ -1,5 +1,5 @@
 <?php
-class IndexController{
+class ApplicantController{
       /**
      * This will execute before every action
      * @param $args
@@ -14,11 +14,19 @@ class IndexController{
     public function postDeploy($args)
     {
     }
-    public function indexAction($args){
+    public function connectAction($args){
 
         $view = new View();
         $view->setView('indexView');
         $view->putData('name', 'moi');
+    }
+    public function disconnectAction($args){
+
+   
+    }
+    public function inscrireAction($args){
+
+   
     }
 
 

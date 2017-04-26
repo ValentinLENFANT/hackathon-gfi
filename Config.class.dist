@@ -22,7 +22,7 @@ class Config {
     const UPLOAD_FOLDER = 'media/imgFiles';
     /*Database data*/
     const DB_HOST = 'localhost';
-    const DB_NAME = '';
+    const DB_NAME = 'enigma';
     const DB_USER = 'root';
     const DB_PASSWORD = ''; 
 }

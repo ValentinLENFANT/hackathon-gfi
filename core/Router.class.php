@@ -9,7 +9,12 @@ class Router
     {
         $request = trim($_SERVER['REQUEST_URI'], '/');
         $uri = explode('/', explode('?', $request)[0]);
-        $controller = !empty($uri[0]) ? $uri[0] : 'index';
+         if(!empty($uri[0]) && $uri[0]!='hackathon-gfi'){
+            $controller = $uri[0]; 
+         }else{
+            $controller = 'index';
+         }
+        $controller = $uri[0]=='' ? $uri[0] : 'index';
         $action = !empty($uri[1]) ? $uri[1] : 'index';
         unset($uri[0]);
         unset($uri[1]);

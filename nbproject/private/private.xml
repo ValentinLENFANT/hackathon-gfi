@@ -3,7 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/wamp/www/hackathon-gfi/Config.class.dist</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/view/indexView.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/models/Users.class.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/Config.class.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/.htaccess</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/view/template/template.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/core/HTTPError.class.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/view/enigm.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/core/Router.class.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/view/404.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/core/View.class.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/core/Sql.class.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/core/Helper.class.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/core/Form.class.php</file>
             <file>file:/C:/wamp/www/hackathon-gfi/index.php</file>
+            <file>file:/C:/wamp/www/hackathon-gfi/controller/IndexController.class.php</file>
         </group>
     </open-files>
 </project-private>

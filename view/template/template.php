@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-    <title><?php echo $params['title']; ?></title>
+    <title>gfi</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
@@ -14,7 +14,8 @@
 
 <article>
     <div>
-        <?php include $this->view; ?>
+        <?php include $this->view;
+        ?>
         
     </div>
 </article>
