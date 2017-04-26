@@ -21,5 +21,4 @@ class IndexController{
         $view->putData('name', 'moi');
     }
 
-
 }
