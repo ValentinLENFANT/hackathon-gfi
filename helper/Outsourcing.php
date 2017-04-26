@@ -6,14 +6,14 @@ class Outsourcing
 {
     protected $dictionarySkills = ['php', 'html', 'css', 'javascript', 'jquery', 'symfony'];
 
-    function readPDF()
+    public function readPDF()
     {
         $parser = new \Smalot\PdfParser\Parser();
         $pdf = $parser->parseFile('../CV/CV.pdf');
         return $pdf->getText();
     }
 
-    function findApplicantSkill($dictionarySkills) //find the list of skills in the CV and return it
+    public function findApplicantSkill($dictionarySkills) //find the list of skills in the CV and return it
     {
         $applicantSkill = array();
         $pdf = readPDF();
@@ -26,7 +26,7 @@ class Outsourcing
         return $applicantSkill;
     }
 
-    function findJobAdvert($dictionarySkills)
+    public function findJobAdvert($dictionarySkills)
     {
         $requiredSkillsForJobAdvert = file('../jobadvert.txt');
         $applicantSkills = findApplicantSkill($dictionarySkills);
