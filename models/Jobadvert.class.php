@@ -10,9 +10,9 @@ class Jobadvert extends Entity{
 	public function __construct($wording=null, $description=null, $skills = null){
 		parent::__construct();
                 
-		$this->setLastname($lastname);
-		$this->setFirstname($firstname);
-		$this->setEmail($email);
+		$this->setWording($wording);
+		$this->setDescription($description);
+		$this->setSkills($skills);
 	}
 
         function getId() {

@@ -6,21 +6,21 @@ class Applicant extends Entity{
 	protected $lastname;
 	protected $email;
 	protected $phoneNumber;
-	protected $adress;
+	protected $address;
 	protected $skills;
 	protected $pwd;
 	protected $age;
 	protected $gender;
 
 
-	public function __construct($lastname=null,$firstname=null,$email = null,$phoneNumber=null,$adress=null,$skills=null,$pwd = null,$age = null,$gender=null ){
+	public function __construct($lastname=null,$firstname=null,$email = null,$phoneNumber=null,$address=null,$skills=null,$pwd = null,$age = null,$gender=null ){
 		parent::__construct();
                 
 		$this->setLastname($lastname);
 		$this->setFirstname($firstname);
 		$this->setEmail($email);
 		$this->setPhoneNumber($phoneNumber);
-		$this->setAdress($adress);
+		$this->setaddress($address);
 		$this->setSkills($skills);
 		$this->setPwd($pwd);
 		$this->setAge($age);
@@ -48,8 +48,8 @@ class Applicant extends Entity{
             return $this->phoneNumber;
         }
 
-        function getAdress() {
-            return $this->adress;
+        function getaddress() {
+            return $this->address;
         }
 
         function getSkills() {
@@ -88,8 +88,8 @@ class Applicant extends Entity{
             $this->phoneNumber = $phoneNumber;
         }
 
-        function setAdress($adress) {
-            $this->adress = $adress;
+        function setaddress($address) {
+            $this->address = $address;
         }
 
         function setSkills($skills) {
