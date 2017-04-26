@@ -18,6 +18,15 @@ class ApplicantController{
                 'enctype' => "multipart/form-data"
             ],
             'data' => [
+                "name" => [
+                    "type" => "text",
+                    "validation" => "text",
+                    "value" => '',
+                    "label" => 'Nom Prénom',
+                    "labelClass" => '',
+                    "class" => 'validate',
+                    "div_class" => 'input-field'
+                ],
                 "email" => [
                     "type" => "text",
                     "validation" => "text",
@@ -79,17 +88,35 @@ class ApplicantController{
     }
     public function inscrireAction($args){
         $data = $this->inscriptionForm->validate();
-       // var_dump($data['dateNaissance']);
+        var_dump($data['name']);
+        if(isset($data['name'])){
+           $name[] = explode(" ", $data['name']);
+           if(isset($name[0])){
+                $firtname = $name[0];
+           }else{
+                $firtname= '';
+           }
+           if(isset($name[1])){
+               $lastname = $name[1];
+           }else{
+                $lastname= '';
+           }
+        }else{
+           $firtname= '';
+           $lastname= '';
+        }
         if($data && !$data['error']['error']){
             $applicant = new Applicant();
             $applicant_data = [
+                "firtname" => $firtname ,
+                "lastname" => $lastname,
                 "email" => $data['email'],
                 "pwd" => $data['pwd'],
                 "dateNaissance" => $data['dateNaissance'],
             ];
-           // Logger::debug($data);
+          //  Logger::debug($data);
             $applicant->fromArray($applicant_data);
-            $applicant->save();
+           // $applicant->save();
         }
         $view = new View();
         $view->setView('inscriptionView');
