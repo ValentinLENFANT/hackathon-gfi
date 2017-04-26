@@ -8,7 +8,7 @@ class Config {
     const URL = '';
     //const URL = 'http://localhost/fournine/';
     //const PATH = 'C:\xampp\htdocs\fournine';
-    const PATH = 'c:\wamp\www\hackathon-gfi';
+    //const PATH = 'c:\wamp\www\hackathon-gfi';
 
     /*Base path*/
     const CONTROLLER_PATH = 'controller';

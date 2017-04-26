@@ -1,13 +1,13 @@
 <?php
 
-include 'vendor/autoload.php';
+include '../vendor/autoload.php';
 
 $dictionarySkills = ['php', 'html', 'css', 'javascript', 'jquery', 'symfony'];
 
 function readPDF()
 {
     $parser = new \Smalot\PdfParser\Parser();
-    $pdf = $parser->parseFile('CV.pdf');
+    $pdf = $parser->parseFile('../CV/CV.pdf');
     return $pdf->getText();
 }
 
@@ -26,7 +26,7 @@ function findApplicantSkill($dictionarySkills) //find the list of skills in the 
 
 function findJobAdvert($dictionarySkills)
 {
-    $requiredSkillsForJobAdvert = file('jobadvert.txt');
+    $requiredSkillsForJobAdvert = file('../jobadvert.txt');
     $applicantSkills = findApplicantSkill($dictionarySkills);
     $matchingRate = array();
     for ($i = 0; $i < count($requiredSkillsForJobAdvert); $i++) {
