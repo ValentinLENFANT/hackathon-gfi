@@ -1,0 +1,7 @@
+1, php, html, css, sql, cakephp
+2, html, css, facebook, management, marketing
+3, linux, ubuntu, php, fail2ban
+4, management, communication
+5, html, css, javascript
+6, html, css
+7, php, html, css, sql, symfony, javascript, python
