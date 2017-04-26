@@ -12,6 +12,7 @@ class Form
     protected $enctype;
     protected $inputs;
 
+
     public function __construct($form = [])
     {
         if (!isset($form['options'])) {
@@ -157,11 +158,14 @@ class Form
                     Logger::log('invalid select value');
                 }
             }
-            if ($default) {
+            /*if ($default) {
                 Logger::log('invalid default value (or unknown component)');
-            }
+            }*/
         }
         $data["error"] = $error;
+        //if (isset($error['state'])) {
+        //    return $error;
+        //}
         return $data;
     }
     /**
@@ -171,10 +175,7 @@ class Form
      */
     public function display($main_class = "", $data = [], $sumited = null)
     {
-        $themeApplicated = (new Theme())->getOneWhere(['applicated'=>true]);
-        if(empty($themeApplicated)){
-            $themeApplicated = (new Theme())->getWhere(['name'=>'default']);
-        }
+
         echo '<form data-extra="" action="' . $this->action . '" method="' . $this->method . '" name="' . $this->name . '" class="' . $this->class . ' ' . $main_class . '" id="' . $this->id . ' ' . $main_class . '" enctype="' . $this->enctype . '">';
         echo '<input type="hidden" value="' . $this->name . '" name="type">';
         if (isset($main_class)) {
@@ -262,11 +263,6 @@ class Form
             } else {
                 $values = "";
             }
-            if (isset($input['themes'])) {
-                $themes = $input['themes'];
-            } else {
-                $themes = "";
-            }
             if (isset($input['div_color'])) {
                 $div_color = $input['div_color'];
             } else {
@@ -289,11 +285,11 @@ class Form
                 ?>
                 <div class="<?php echo $div_class ?>">
                     <i class="<?php echo $icon_class ?>"><?php echo $icon_content ?></i>
-                    <label for="<?php echo $name ?>" class="<?php echo $labelClass . ' ' . $themeApplicated->getTextColor() ?>"><?php echo $label ?></label>
+                    <label for="<?php echo $name ?>" class=""><?php echo $label ?></label>
                     <textarea
                         name="<?php echo $name ?>"
                         placeholder="<?php echo $placeholder ?>"
-                        class="<?php echo $class .' '. $themeApplicated->getTextColor()?>"
+                        class=""
                         id="<?php echo $id ?>"
                     >
                     <?php echo (isset($data[$name])) ? $data[$name] : $value; ?>
@@ -315,7 +311,7 @@ class Form
                         >
                     </div>
                     <div class="<?php echo $class_wrapper ?>">
-                        <input class="<?php echo $class_inputWrapper . ' '.$themeApplicated->getTextColor() ?>" type="text">
+                        <input class="" type="text">
                     </div>
                 </div>
                 <?php
@@ -323,11 +319,9 @@ class Form
                 ?>
                     <div class="<?php echo $div_class ?>">
                         <div class="<?php echo $class ?>">
-                            <label class="<?php echo $class .' '. $themeApplicated->getTextColor() ?>"><?php echo $label ?></label>
+                            <label class=""><?php echo $label ?></label>
                             <select name="<?php echo $name ?>" class="<?php echo $class ?>">
-                                <?php foreach ($themes as $theme){?>
-                                      <option value="<?php echo $theme->getId() ?>"><?php echo $theme->getName(); ?></option>
-                                <?php } ?>
+                                      <option value=""><?php echo $value; ?></option>
                             </select>
                         </div>
                     </div>
@@ -357,7 +351,7 @@ class Form
                <div class="top-5 down-5 <?php echo $div_class ?>">
                    <div class="col s12">
                         <label
-                            class="<?php echo $class . ' ' . $themeApplicated->getTextColor() ; ?>"
+                            class=""
                             for="">
                                 <?php echo  $label; ?>
                         </label>
@@ -402,11 +396,11 @@ class Form
                 ?>
                 <div class="<?php echo $div_class ?>">
                     <i class="<?php echo $icon_class ?>"><?php echo $icon_content ?></i>
-                    <label for="<?php echo $name ?>" class="<?php echo $labelClass .' '. $themeApplicated->getTextColor() ?>"><?php echo $label ?></label>
+                    <label for="<?php echo $name ?>" class=""><?php echo $label ?></label>
                     <input
                         name="<?php echo $name ?>"
                         type="<?php echo $type ?>"
-                        class="<?php echo $class .' '. $themeApplicated->getTextColor()?>"
+                        class=""
                         value="<?php echo (isset($data[$name])) ? $data[$name] : $value; ?>"
                     >
                 </div>
@@ -414,30 +408,13 @@ class Form
                 <?php
             }
         }
-        if ($sumited != 1 && $sumited!=2) {
+
             echo '<div class="row">'
-                . '<div class="col s4">'
-                . '<a class="waves-effect waves-light btn left grey lighten-2 black-text">'
-                . '<i class="material-icons left">subdirectory_arrow_left</i>Retour'
-                . '</a>'
-                . '</div>'
-                . '<div class="col s4"></div>'
                 . '<div class="col s4">'
                 . '<button name="submit" id="submit" type="submit" onclick="' . $this->onclick . '" class="btn right green accent-4">' . $this->submit
                 . '</button>'
                 . '</div>';
             echo '</form>';
-        }elseif($sumited == 2){
-            echo  '<div class="top-5 col s4 right">'
-                    . '<button '
-                        . 'name="submit"'
-                        . ' id="submit"'
-                        . ' type="submit"'
-                        . ' onclick="' . $this->onclick . '" '
-                        . 'class="btn right blue accent-4">' . $this->submit
-                    . '</button>'
-                . '</div>';
-            echo '</form>';
-        }
+     
     }
 }

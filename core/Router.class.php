@@ -8,14 +8,23 @@ class Router
     public static function parseRoute()
     {
         $request = trim($_SERVER['REQUEST_URI'], '/');
+        //var_dump($request);
         $uri = explode('/', explode('?', $request)[0]);
+        //var_dump($uri[0]);
          if(!empty($uri[0]) && $uri[0]!='hackathon-gfi'){
             $controller = $uri[0]; 
+            $action = !empty($uri[1]) ? $uri[1] : 'index';
+         }elseif($uri[0]=='hackathon-gfi'){
+            $controller = $uri[1];
+            $action = !empty($uri[2]) ? $uri[2] : 'index';
          }else{
-            $controller = 'index';
+            $controller = 'index';  
          }
-        $controller = $uri[0]=='' ? $uri[0] : 'index';
-        $action = !empty($uri[1]) ? $uri[1] : 'index';
+        
+       // $controller = $uri[0]=='' ? $uri[0] : 'index';
+        //$action = !empty($uri[1]) ? $uri[1] : 'index';
+       // var_dump($controller);  var_dump($action);
+       
         unset($uri[0]);
         unset($uri[1]);
         $args = array_merge($uri, $_REQUEST);

@@ -1,7 +1,7 @@
 <?php
 class Applicant extends Entity{
 
-	protected $id = -1;
+	protected $id;
 	protected $firstname;
 	protected $lastname;
 	protected $email;
@@ -9,11 +9,12 @@ class Applicant extends Entity{
 	protected $address;
 	protected $skills;
 	protected $pwd;
-	protected $age;
+	protected $dateNaissance;
 	protected $gender;
+	protected $admin;
 
 
-	public function __construct($lastname=null,$firstname=null,$email = null,$phoneNumber=null,$address=null,$skills=null,$pwd = null,$age = null,$gender=null ){
+	public function __construct($lastname=null,$firstname=null,$email = null,$phoneNumber=null,$address=null,$skills=null,$pwd = null,$dateNaissance = null,$gender=null ){
 		parent::__construct();
                 
 		$this->setLastname($lastname);
@@ -23,7 +24,7 @@ class Applicant extends Entity{
 		$this->setaddress($address);
 		$this->setSkills($skills);
 		$this->setPwd($pwd);
-		$this->setAge($age);
+		$this->setDateNaissance($dateNaissance);
 		$this->setGender($gender);
 	}
 
@@ -60,12 +61,16 @@ class Applicant extends Entity{
             return $this->pwd;
         }
 
-        function getAge() {
-            return $this->age;
+        function getDateNaissance() {
+            return $this->dateNaissance;
         }
 
         function getGender() {
             return $this->gender;
+        }
+        
+        function getAdmin() {
+            return $this->admin;
         }
 
         function setId($id) {
@@ -100,12 +105,16 @@ class Applicant extends Entity{
             $this->pwd = $pwd;
         }
 
-        function setAge($age) {
-            $this->age = $age;
+        function setDateNaissance($dateNaissance) {
+            $this->dateNaissance = $dateNaissance;
         }
 
         function setGender($gender) {
             $this->gender = $gender;
+        }
+        
+        function setAdmin($admin) {
+            $this->admin = $admin;
         }
 
 

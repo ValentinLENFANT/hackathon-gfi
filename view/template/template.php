@@ -14,8 +14,7 @@
 
 <article>
     <div>
-        <?php include $this->view;
-        ?>
+        <?php include $this->view; ?>
         
     </div>
 </article>
@@ -23,7 +22,7 @@
   
     <div class="footer-copyright">
         <div class="container">
-            Â© 2017 Copyright Text
+            © 2017 Copyright Text
             <a class="right" href="#!">Contactez-nous</a>
         </div>
     </div>

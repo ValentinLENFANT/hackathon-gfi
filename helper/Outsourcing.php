@@ -1,9 +1,9 @@
 <?php
 
 include '../vendor/autoload.php';
+class Outsourcing{
+protected $dictionarySkills = ['php', 'html', 'css', 'javascript', 'jquery', 'symfony'];
 
-$dictionarySkills = ['php', 'html', 'css', 'javascript', 'jquery', 'symfony'];
-$ab=0;
 
 function readPDF()
 {
@@ -58,5 +58,5 @@ function findJobAdvert($dictionarySkills)
     }
     return $bestJobAdvert;
 }
-
+}
 echo "The job advert is " .findJobAdvert($dictionarySkills);

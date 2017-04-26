@@ -46,7 +46,7 @@ abstract class Entity
             }
             $data[$column] = $value;
         }
-        if (is_numeric($this->getId())) {
+        if (is_numeric($this->getId()) && $this->getId()>0) {
             $sets = [];
             foreach ($this->columns as $column) {
                 if ($column == 'id') {
