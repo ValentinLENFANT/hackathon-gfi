@@ -53,7 +53,7 @@
                         <a class="page-scroll" href="view/connectView.php">Connexion</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#inscription" style="border: 1px white solid;padding-top: 2px;padding-bottom: 2px;margin-top: 12px;margin-right: 20px;">S'inscrire</a>
+                        <a class="page-scroll" href="view/inscriptionView.php" style="border: 1px white solid;padding-top: 2px;padding-bottom: 2px;margin-top: 12px;margin-right: 20px;">S'inscrire</a>
                     </li>
                     <li>
                         <a class="navbar-brand page-scroll" href="#page-top"><img src="web/img/gfi.png" width="58" style="position: relative;bottom: 9px;"></a>
