@@ -12,10 +12,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="<?php echo Router::getUrl("Applicant", "connect"); ?>">Connexion</a>
+                        <a class="page-scroll" href="<?php echo Router::getUrl("applicant", "connect"); ?>">Connexion</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?php echo Router::getUrl("Applicant", "inscrire"); ?>" style="border: 1px white solid;padding-top: 2px;padding-bottom: 2px;margin-top: 12px;margin-right: 20px;">S'inscrire</a>
+                        <a class="page-scroll" href="<?php echo Router::getUrl("applicant", "inscrire"); ?>" style="border: 1px white solid;padding-top: 2px;padding-bottom: 2px;margin-top: 12px;margin-right: 20px;">S'inscrire</a>
                     </li>
                     <li>
                         <a class="navbar-brand page-scroll" href="#page-top"><img src="media/img/gfi.png" width="58" style="position: relative;bottom: 9px;"></a>
