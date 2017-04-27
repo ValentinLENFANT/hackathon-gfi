@@ -25,7 +25,7 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-    </nav>   
+    </nav>
     <header>
         <div class="header-content">
             <img src="media/img/logo.png" class="img-responsive centree" alt="logo enigma">
@@ -40,7 +40,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: #f59331;font-size: 70px;font-family:Lato;">EXPERT EN FINANCE</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
+                    <h2 class="section-heading" style="color: #f59331;font-size: 70px;font-family:Lato;">MAGICIEN DE LA FINANCE</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
                     <hr class="light">
                 </div>
             </div>
@@ -74,7 +74,7 @@ Prêt ? Alors à vos baguettes !</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: white;font-size: 70px;font-family:Lato;">EXPERT EN RH</h2><h3 style="margin: 0px auto;
+                    <h2 class="section-heading" style="color: white;font-size: 70px;font-family:Lato;">DIEU DE LA RH</h2><h3 style="margin: 0px auto;
     color: #f5f5f5;
     font-family: Lato;
     display: initial;
@@ -117,7 +117,7 @@ Prêt ? Montez sur votre chameau, c’est parti !</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: #f59331;font-size: 3.2em;font-family:Lato;">EXPERT COMMERCIAL</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
+                    <h2 class="section-heading" style="color: #f59331;font-size: 3.2em;font-family:Lato;">EXPLORATEUR DU COMMERCE</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
                     <hr class="light">
                 </div>
             </div>
@@ -151,7 +151,7 @@ Prêt ? Brandissez votre lasso, direction l’expédition !</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: white;font-size: 70px;font-family:Lato;">EXPERT DES LETTRES</h2><h3 style="margin: 0px auto;
+                    <h2 class="section-heading" style="color: white;font-size: 70px;font-family:Lato;">AGENT DE LA COM</h2><h3 style="margin: 0px auto;
     color: #f5f5f5;
     font-family: Lato;
     display: initial;
@@ -194,7 +194,7 @@ Prêt ? Que la missions d’espionnage commence !</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: #f59331;font-size:4.2em;font-family:Lato;">EXPERT EN CONSEIL</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
+                    <h2 class="section-heading" style="color: #f59331;font-size:4.2em;font-family:Lato;">CAPITAINE DU CONSEIL</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
                     <hr class="light">
                 </div>
             </div>
