@@ -22,7 +22,7 @@
   
     <div class="footer-copyright">
         <div class="container">
-            © 2017 Copyright Text
+            cpy; 2017 Copyright Text
             <a class="right" href="#!">Contactez-nous</a>
         </div>
     </div>

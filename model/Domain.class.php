@@ -1,7 +1,7 @@
 <?php
 class Domain extends Entity{
 
-	protected $id = -1;
+	protected $id;
 	protected $wording;
 
 	public function __construct($wording=null){

@@ -1,7 +1,7 @@
 <?php
 class Jobadvert extends Entity{
 
-	protected $id = -1;
+	protected $id;
 	protected $wording;
 	protected $description;
 	protected $skills;

@@ -85,18 +85,6 @@ class Form
                 return null;
             }
             $default = true;
-            if ($input['validation'] == 'wysiwyg') {
-                $default = false;
-                if (is_string($_POST[$key])) {
-                    /* remove all tags except h2, h3, h4, h5, h6, p, img, table, th, td, tr, ul, li*/
-                    $data[$key] = trim(preg_replace("#(?i)<(?!\/?(img|h[2-6]|p|div|label|table|th|td|tr|ul|li)).*?>#"
-                        , "", $_POST[$key]));
-                } else {
-                    $error["error"] = true;
-                    $error['fields'][] = $key;
-                    Logger::log('invalid text value');
-                }
-            }
             if ($input['validation'] == 'text') {
                 $default = false;
                 if (is_string($_POST[$key])) {
@@ -150,12 +138,62 @@ class Form
             }
             if ($input['validation'] == 'select') {
                 $default = false;
-                if ($_POST[$key]) {
+                if (isset($_POST[$key])) {
                     $data[$key] =  $_POST[$key];
                 } else {
                     $error["error"] = true;
                     $error['fields'][] = $key;
                     Logger::log('invalid select value');
+                }
+            }
+            if ($input['validation'] == 'email') {
+                $default = false;
+                if (isset($_POST[$key])) {
+                   if (filter_var($_POST[$key], FILTER_VALIDATE_EMAIL))
+                   {
+                    $applicant = new Applicant();
+                    $applicants = $applicant->getWhere();
+                    $email= array();
+                    foreach ($applicants as $emails){
+                      $email[] = $emails->getEmail();
+                    }
+                    if(!in_array($_POST[$key], $email)){
+                         $data[$key] =  $_POST[$key];
+                    }else{
+                        $error["error"] = true;
+                        $error['fields'][] = $key;
+                        Logger::log('le mail exite déja!'); 
+                    }
+                   }
+                } else {
+                    $error["error"] = true;
+                    $error['fields'][] = $key;
+                    Logger::log('Le mail est obligatoire');
+                }
+            }
+            if ($input['validation'] == 'password') {
+                $default = false;
+                if (isset($_POST[$key])) {
+                   if (filter_var($_POST[$key], FILTER_VALIDATE_EMAIL))
+                   {
+                    $applicant = new Applicant();
+                    $applicants = $applicant->getWhere();
+                    $email= array();
+                    foreach ($applicants as $emails){
+                      $email[] = $emails->getEmail();
+                    }
+                    if(!in_array($_POST[$key], $email)){
+                         $data[$key] =  $_POST[$key];
+                    }else{
+                        $error["error"] = true;
+                        $error['fields'][] = $key;
+                        Logger::log('le mail exite déja!'); 
+                    }
+                   }
+                } else {
+                    $error["error"] = true;
+                    $error['fields'][] = $key;
+                    Logger::log('Le mail est obligatoire');
                 }
             }
             /*if ($default) {
@@ -315,13 +353,15 @@ class Form
                     </div>
                 </div>
                 <?php
-            } elseif ($name == "select") {
+            } elseif ($type== "select") {
                 ?>
                     <div class="<?php echo $div_class ?>">
                         <div class="<?php echo $class ?>">
                             <label class=""><?php echo $label ?></label>
                             <select name="<?php echo $name ?>" class="<?php echo $class ?>">
-                                      <option value=""><?php echo $value; ?></option>
+                                <?php foreach($values as $value){ ?>
+                                     <option value="<?php echo $value->getId() ?>"><?php echo $value->getWording(); ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>

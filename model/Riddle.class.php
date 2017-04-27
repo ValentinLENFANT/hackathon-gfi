@@ -1,7 +1,7 @@
 <?php
 class Riddle extends Entity{
 
-	protected $id = -1;
+	protected $id;
 	protected $name;
 	protected $content;
 	protected $idDomain;
