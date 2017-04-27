@@ -74,6 +74,16 @@
                    $err[] ='le mot de passe ne correspond pas sa confirmation';
                }
             }
+            if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+                   {
+                    $stm=$dbh->prepare("select email from applicant where email=:email;");
+                    $stm->bindParam(':email', $_POST['email']);
+                    $stm->execute();
+                    $email = $stm->fetch();
+		    if(!$email==null){
+                        $err[] ='L\'adresse mail existe déja';
+		    }
+            }
             if(!isset($err)){
                 if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['pwd']))
                 {
