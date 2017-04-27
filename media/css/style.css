@@ -1,3 +1,11 @@
 header{
-    margin-top: 300px; margin-bottom: 300px;background-image:url(img/header.jpg);
+    background-color: #000000;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    background-image:url(../img/header.jpg);
+}
+.headerImg{
+    margin: 0px;
+    background-color: #000000;
+    background-image:url(../img/header.jpg);
 }
