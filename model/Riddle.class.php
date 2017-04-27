@@ -1,5 +1,5 @@
 <?php
-class Enigme extends Entity{
+class Riddle extends Entity{
 
 	protected $id = -1;
 	protected $name;
