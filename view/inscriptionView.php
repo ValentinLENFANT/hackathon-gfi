@@ -80,26 +80,28 @@
                     $stm->bindParam(':email', $_POST['email']);
                     $stm->execute();
                     $email = $stm->fetch();
-		    if(!$email==null){
+		    if(!empty($email)){
                         $err[] ='L\'adresse mail existe déja';
 		    }
             }
-            if(!isset($err)){
-                if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['pwd']))
-                {
-                    $stmt = $dbh->prepare("INSERT INTO applicant (firstname, lastname, email, pwd)
-                    VALUES (:firstname , :lastname , :email , :pwd)");
-                    $stmt->execute(array(':firstname' => $firtname,':lastname' => $lastname, ':email' => $_POST['email'], ':pwd' => $_POST['pwd']));
-                    //echo"<script> alert('done.'); </script>";
+            
+            if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['pwd']))
+            {
+                   if(empty($err)){
+                        $stmt = $dbh->prepare("INSERT INTO applicant (firstname, lastname, email, pwd)
+                        VALUES (:firstname , :lastname , :email , SHA1(:pwd))");
+                        $stmt->execute(array(':firstname' => $firtname,':lastname' => $lastname, ':email' => $_POST['email'], ':pwd' => $_POST['pwd']));
+                        echo"<script> alert('done.'); </script>";
+                    }else{
+                        foreach($err as $er){
+                            echo $er;
+                        }
+                    }   
                 }
                 else{
                      echo"<script> alert('Tous les champs sont obligatoires.'); </script>";
                 }
-            }else{
-                foreach($err as $er){
-                    echo $er;
-                }
-            }
+         
         }
     ?>
     <div class="">

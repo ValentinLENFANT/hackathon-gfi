@@ -51,7 +51,7 @@
 			if(empty($email) || empty($pwd)){
 				echo"Veuillez remplir le login ou le mot de passe";
 			}else{
-				$stmt=$dbh->prepare("select id, firstname , lastname from applicant where email=:email and pwd=:pwd;");
+				$stmt=$dbh->prepare("select id, firstname , lastname from applicant where email=:email and pwd=SHA1(:pwd);");
 				$stmt->bindParam(':email', $email);
 				$stmt->bindParam(':pwd', $pwd);
 				$stmt->execute();
