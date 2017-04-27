@@ -1,8 +1,2 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    # si l'url saisie correspond effectivement à un fichier ou un dossier
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-
-    RewriteRule . index.php [L]
-</IfModule>
+#User-agent: *
+#Disallow: /
