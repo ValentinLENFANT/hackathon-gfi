@@ -116,11 +116,15 @@ class ApplicantController{
         if($data && !$data['error']['error'] && !isset($err)){
             $applicant_data = [
                 "email" => $data['email'],
-                "pwd" => crypt($data['pwd']),
+                "pwd" => $data['pwd'],
             ];
             Logger::debug($data);
             $applicantConnect = $applicant->getWhere($applicant_data);
-            var_dump($applicantConnect);
+            if($applicantConnect){
+               $view = new View();
+               $view->setView('applicantView'); 
+               $view->putData('name', 'moi');
+            }
         }
         $view = new View();
         $view->setView('connectView');
