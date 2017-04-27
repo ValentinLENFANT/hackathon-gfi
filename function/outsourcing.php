@@ -52,5 +52,3 @@ function findJobAdvert($dictionarySkills)
     }
     return $bestJobAdvert;
 }
-
-print_r(findJobAdvert($dictionarySkills));
