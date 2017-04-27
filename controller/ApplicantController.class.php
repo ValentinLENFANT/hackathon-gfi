@@ -183,9 +183,12 @@ class ApplicantController{
                 $applicant->save();
         }
         $view = new View();
+        $view->putData('styles', ['style','creative.min.css']);
         $view->setView('inscriptionView');
         $view->putData('name', 'moi');
         $view->putData('inscriptionForm', $this->inscriptionForm);
+
+
         if(isset($err)){
             $view->putData('err', $err);
         }
