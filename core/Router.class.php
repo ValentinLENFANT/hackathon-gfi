@@ -15,15 +15,20 @@ class Router
             $controller = $uri[0]; 
             $action = !empty($uri[1]) ? $uri[1] : 'index';
          }elseif($uri[0]=='hackathon-gfi'){
-            $controller = $uri[1];
+            if(isset($uri[1])){
+                $controller = $uri[1];
+            }else{
+                $controller ='index';
+            }
             $action = !empty($uri[2]) ? $uri[2] : 'index';
          }else{
-            $controller = 'index';  
+            $controller = 'index'; 
+            $action =  'index';
          }
         
        // $controller = $uri[0]=='' ? $uri[0] : 'index';
         //$action = !empty($uri[1]) ? $uri[1] : 'index';
-       // var_dump($controller);  var_dump($action);
+        //var_dump($controller);  var_dump($action);
        
         unset($uri[0]);
         unset($uri[1]);

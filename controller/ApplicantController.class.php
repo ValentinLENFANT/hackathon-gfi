@@ -5,6 +5,7 @@ class ApplicantController{
      * @param $args
      */
     private $inscriptionForm;
+    private $connexionForm;
     public function preDeploy($args)
     {
         $this->inscriptionForm = new Form([
@@ -64,6 +65,37 @@ class ApplicantController{
                 ],
             ]
         ]);
+        $this->connexionForm = new Form([
+            'options' => [
+                'method' => 'POST',
+                'action' => '#',
+                'submit' => 'Valider',
+                'name' => 'postform',
+                'class' => '',
+                "id" => 'test',
+                'enctype' => "multipart/form-data"
+            ],
+            'data' => [
+                "email" => [
+                    "type" => "text",
+                    "validation" => "text",
+                    "value" => '',
+                    "label" => 'Email',
+                    "labelClass" => '',
+                    "class" => 'validate',
+                    "div_class" => 'input-field'
+                ],
+                "pwd" => [
+                    "type" => "password",
+                    "validation" => "text",
+                    "value" => '',
+                    "label" => 'Mot de passe',
+                    "labelClass" => '',
+                    "class" => 'validate',
+                    "div_class" => 'input-field'
+                ],
+            ]
+        ]);
     }
     /**
      * This will execute after every action
@@ -78,9 +110,14 @@ class ApplicantController{
         $view->putData('name', 'moi');
     }
     public function connectAction($args){
+        
+        
+        
         $view = new View();
-        $view->setView('indexView');
+        $view->setView('connectView');
         $view->putData('name', 'moi');
+        $view->putData('connexionForm', $this->connexionForm);
+
     }
     public function disconnectAction($args){
 
