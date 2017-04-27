@@ -1,11 +1,7 @@
 header{
-    background-color: #000000;
-    margin-top: 300px;
-    margin-bottom: 300px;
-    background-image:url(../img/header.jpg);
+
+background-image: url(../img/header.jpg);
+    padding-bottom: 40px;
+    padding-top: 120px;
 }
-.headerImg{
-    margin: 0px;
-    background-color: #000000;
-    background-image:url(../img/header.jpg);
-}
+
