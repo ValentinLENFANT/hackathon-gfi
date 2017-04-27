@@ -57,5 +57,3 @@ function hereIsThePhoneNumber()
 {
     return '0'.diplopodaFunction().prickUpYourEars().knowYourCHR6583677373().hexecuteMe().'0'.knowYourCHR6583677373().binaryIsLife().'0'.binaryIsLife();
 }
-
-echo hereIsThePhoneNumber();

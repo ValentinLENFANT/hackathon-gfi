@@ -158,9 +158,5 @@ class ApplicantController{
         $view->setView('inscriptionView');
         $view->putData('name', 'moi');
         $view->putData('inscriptionForm', $this->inscriptionForm);
-       // $view->putData('err', $err);
-   
     }
-
-
 }
