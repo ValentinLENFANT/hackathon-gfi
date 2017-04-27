@@ -30,7 +30,7 @@ class ApplicantController{
                 ],
                 "email" => [
                     "type" => "text",
-                    "validation" => "text",
+                    "validation" => "email",
                     "value" => '',
                     "label" => 'Email',
                     "labelClass" => '',
@@ -48,7 +48,7 @@ class ApplicantController{
                 ],
                 "confirmation" => [
                     "type" => "password",
-                    "validation" => "",
+                    "validation" => "text",
                     "value" => '',
                     "label" => 'Confirmez votre mot de passe',
                     "div_class" => 'btn amber accent-4',
@@ -109,15 +109,27 @@ class ApplicantController{
         $view->setView('indexView');
         $view->putData('name', 'moi');
     }
-    public function connectAction($args){
-        
-        
-        
+    public function connectAction($args)
+    {
+        $data = $this->connexionForm->validate();
+        $applicant = new Applicant();
+        if($data && !$data['error']['error'] && !isset($err)){
+            $applicant_data = [
+                "email" => $data['email'],
+                "pwd" => $data['pwd'],
+            ];
+            Logger::debug($data);
+            $applicantConnect = $applicant->getWhere($applicant_data);
+            if($applicantConnect){
+               $view = new View();
+               $view->setView('applicantView'); 
+               $view->putData('name', 'moi');
+            }
+        }
         $view = new View();
         $view->setView('connectView');
         $view->putData('name', 'moi');
         $view->putData('connexionForm', $this->connexionForm);
-
     }
     public function disconnectAction($args){
 
@@ -125,36 +137,53 @@ class ApplicantController{
     }
     public function inscrireAction($args){
         $data = $this->inscriptionForm->validate();
-        if(isset($data['name'])){
-           $name = explode(" ", $data['name']);
-           if(isset($name[0])){
-                $firtname = $name[0];
-           }else{
-                $firtname= '';
+       // var_dump($data['confirmation']);
+       // $pattern = '#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)#';
+        $err= array();
+        if(isset($data['confirmation']) && isset($data['pwd'])){
+           if(!(strlen($data['pwd']) >=8)){
+               $err[] ='le mot de passe n\'est pas conforme, 8 caractére minimum';
            }
-           if(isset($name[1])){
-               $lastname = $name[1];
-           }else{
-                $lastname= '';
+          /* if (!preg_match($pattern, $data['pwd'])){
+                 $err[] ='le mot de passe n\'est pas conforme, Majescule, entier recomamlmjkhkjefjl';
+           }*/
+           if(!($data['pwd']==$data['confirmation'])){
+               $err[] ='le mot de passe ne correspond pas sa confirmation';
            }
-        }else{
-           $firtname= '';
-           $lastname= '';
         }
+        //var_dump($err);
+        if(isset($data['name'])){
+               $name = explode(" ", $data['name']);
+               if(isset($name[0])){
+                    $firtname = $name[0];
+               }else{
+                    $firtname= '';
+               }
+               if(isset($name[1])){
+                   $lastname = $name[1];
+               }else{
+                    $lastname= '';
+               }
+            }else{
+               $firtname= '';
+               $lastname= '';
+            }
+           // var_dump($err);
         if($data && !$data['error']['error']){
-            $applicant = new Applicant();
-            $applicant_data = [
-                "firstname" => $firtname ,
-                "lastname" => $lastname,
-                "email" => $data['email'],
-                "pwd" => $data['pwd'],
-                "dateNaissance" => $data['dateNaissance'],
-            ];
-          //  Logger::debug($data);
-            $applicant->fromArray($applicant_data);
-            $applicant->save();
+                $applicant = new Applicant();
+                $applicant_data = [
+                    "firstname" => $firtname ,
+                    "lastname" => $lastname,
+                    "email" => $data['email'],
+                    "pwd" => $data['pwd'],
+                    "dateNaissance" => $data['dateNaissance'],
+                ];
+                Logger::debug($data);
+                $applicant->fromArray($applicant_data);
+                $applicant->save();
         }
         $view = new View();
+        $view->putData('styles', ['style','creative.min.css']);
         $view->setView('inscriptionView');
         $view->putData('name', 'moi');
         $view->putData('inscriptionForm', $this->inscriptionForm);

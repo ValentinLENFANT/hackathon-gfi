@@ -6,6 +6,8 @@ class RiddleController
 
     public function preDeploy($args)
     {
+        $domain = new Domain();
+        $domains = $domain->getWhere();
         $this->riddleForm = new Form([
             'options' => [
                 'method' => 'POST',
@@ -36,9 +38,11 @@ class RiddleController
                     "div_class" => 'input-field'
                 ],
                 "idDomain" => [
-                    "type" => "text",
-                    "validation" => "text",
+                    "type" => "select",
+                    "validation" => "select",
                     "value" => '',
+                    "name" => 'domain',
+                    "values"=> $domains,
                     "label" => "What is the riddle's field?",
                     "labelClass" => '',
                     "class" => 'validate',
@@ -75,7 +79,7 @@ class RiddleController
     public function addRiddleAction($args)
     {
         $data = $this->riddleForm->validate();
-        if ($data && !$data['error']['error']) {
+        if($data && !$data['error']['error']){
             $riddle = new Riddle();
             $riddle_data = [
                 "name" => $data['name'],
@@ -100,7 +104,6 @@ class RiddleController
         $rid = $riddle->getWhere();
         foreach ($rid as $value)
         {
-            //var_dump(htmlentities($value->getContent()));
             $test = htmlentities($value->getContent());
         }
         $text = $test;
