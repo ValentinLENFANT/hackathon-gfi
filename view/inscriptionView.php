@@ -119,7 +119,7 @@
                                                     <label style="font-family:Lato;">Nom et prénom </label><input type="text" id="name" class="form-control" name="name" placeholder=""/>
                                                     <label style="font-family:Lato;">Email</label><input type="text" id="email" class="form-control" name="email" placeholder=""/>
                                                     <label style="font-family:Lato;">Mot de passe</label><input type="password" id="pwd" class="form-control" name="pwd" placeholder=""/>
-                                                    <label style="font-family:Lato;">Confirmer</label><input name="confirm" id="telephone" class="form-control" placeholder=""/>
+                                                    <label style="font-family:Lato;">Confirmer</label><input type="password" name="confirm" id="telephone" class="form-control" placeholder=""/>
                                                     <label style="font-family:Lato;">Uploader votre CV</label><input type="file" id="cv" class="form-control" name="cv" placeholder=""/>
                                             </fieldset>
                                             <div class="top" style="margin-top: 20px;">
