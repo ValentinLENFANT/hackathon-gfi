@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1d751e5-56cb-40f3-aefe-b32c966d9217" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/inscriptionView.php" afterPath="$PROJECT_DIR$/view/inscriptionView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/riddleView.php" afterPath="$PROJECT_DIR$/view/riddleView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/newAdvert.php" afterPath="$PROJECT_DIR$/view/newAdvert.php" />
     </list>
     <ignored path="hackathon-gfi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,16 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/function/connexion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="inscriptionView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/inscriptionView.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,6 +48,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="newAdvert.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/newAdvert.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="92" column="79" selection-start-line="92" selection-start-column="79" selection-end-line="92" selection-end-column="79" />
+              <folding>
+                <marker date="1493366346430" expanded="true" signature="3425:3941" ph="..." />
+                <marker date="1493366346430" expanded="true" signature="3448:3936" ph="..." />
+                <marker date="1493366346430" expanded="true" signature="3590:3638" ph="..." />
+                <marker date="1493366346430" expanded="true" signature="3670:3924" ph="..." />
+                <marker date="1493366346430" expanded="true" signature="4307:4456" ph="INSERT INTO jobadvert... " />
+                <marker date="1493366346430" expanded="true" signature="5132:5849" ph="..." />
+                <marker date="1493366346430" expanded="true" signature="5181:5849" ph="..." />
+                <marker date="1493366346430" expanded="true" signature="6015:6035" ph="select * fro... domain" />
+                <marker date="1493366346430" expanded="true" signature="6871:6891" ph="select * fro... riddle" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="NewRiddleView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/NewRiddleView.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="riddleView.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="riddleView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/riddleView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+            <state relative-caret-position="289">
+              <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
               <folding>
                 <marker date="1493362840206" expanded="true" signature="3010:3526" ph="..." />
                 <marker date="1493362840206" expanded="true" signature="3033:3521" ph="..." />
@@ -109,6 +117,38 @@
                 <marker date="1493362840206" expanded="true" signature="7408:7652" ph="..." />
                 <marker date="1493362840206" expanded="true" signature="7464:7641" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicantView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/applicantView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connectView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/connectView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+              <folding>
+                <marker date="1493359600152" expanded="true" signature="2001:2092" ph="select id, f... applicant" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/indexView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,6 +203,7 @@
         <option value="$PROJECT_DIR$/view/inscriptionView.php" />
         <option value="$PROJECT_DIR$/function/jobAdvert.php" />
         <option value="$PROJECT_DIR$/view/riddleView.php" />
+        <option value="$PROJECT_DIR$/view/newAdvert.php" />
       </list>
     </option>
   </component>
@@ -330,12 +371,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493329326203</updated>
-      <workItem from="1493329329109" duration="15668000" />
+      <workItem from="1493329329109" duration="18211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15668000" />
+    <option name="totallyTimeSpent" value="18211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -390,21 +431,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/connectView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1493359600152" expanded="true" signature="2001:2092" ph="select id, f... applicant" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -412,6 +438,43 @@
           <folding>
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function/outsourcing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function/jobAdvert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="42" />
+          <folding>
+            <marker date="1493338681541" expanded="true" signature="267:300" ph="SELECT * FRO... jobadvert" />
+            <marker date="1493338681541" expanded="true" signature="267:337" ph="SELECT * FRO... jobadvert" />
+            <marker date="1493338681541" expanded="true" signature="608:641" ph="SELECT * FRO... jobadvert" />
+            <marker date="1493338681541" expanded="true" signature="1214:1244" ph="SELECT * FRO... riddle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function/riddle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -423,10 +486,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/function/connexion.php">
+    <entry file="file://$PROJECT_DIR$/view/connectView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        <state relative-caret-position="311">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding>
+            <marker date="1493359600152" expanded="true" signature="2001:2092" ph="select id, f... applicant" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/indexView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -469,39 +542,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/function/outsourcing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/function/jobAdvert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="42" />
-          <folding>
-            <marker date="1493338681541" expanded="true" signature="267:300" ph="SELECT * FRO... jobadvert" />
-            <marker date="1493338681541" expanded="true" signature="267:337" ph="SELECT * FRO... jobadvert" />
-            <marker date="1493338681541" expanded="true" signature="608:641" ph="SELECT * FRO... jobadvert" />
-            <marker date="1493338681541" expanded="true" signature="1214:1244" ph="SELECT * FRO... riddle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/function/riddle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/riddleView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+        <state relative-caret-position="289">
+          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
           <folding>
             <marker date="1493362840206" expanded="true" signature="3010:3526" ph="..." />
             <marker date="1493362840206" expanded="true" signature="3033:3521" ph="..." />
@@ -528,6 +572,24 @@
             <marker date="1493362840206" expanded="true" signature="7269:7381" ph="..." />
             <marker date="1493362840206" expanded="true" signature="7408:7652" ph="..." />
             <marker date="1493362840206" expanded="true" signature="7464:7641" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/newAdvert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="92" column="79" selection-start-line="92" selection-start-column="79" selection-end-line="92" selection-end-column="79" />
+          <folding>
+            <marker date="1493366346430" expanded="true" signature="3425:3941" ph="..." />
+            <marker date="1493366346430" expanded="true" signature="3448:3936" ph="..." />
+            <marker date="1493366346430" expanded="true" signature="3590:3638" ph="..." />
+            <marker date="1493366346430" expanded="true" signature="3670:3924" ph="..." />
+            <marker date="1493366346430" expanded="true" signature="4307:4456" ph="INSERT INTO jobadvert... " />
+            <marker date="1493366346430" expanded="true" signature="5132:5849" ph="..." />
+            <marker date="1493366346430" expanded="true" signature="5181:5849" ph="..." />
+            <marker date="1493366346430" expanded="true" signature="6015:6035" ph="select * fro... domain" />
+            <marker date="1493366346430" expanded="true" signature="6871:6891" ph="select * fro... riddle" />
           </folding>
         </state>
       </provider>

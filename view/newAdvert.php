@@ -89,10 +89,9 @@
         if(ISSET($_POST['valider'])){
             if(!empty($_POST['wording']) && !empty($_POST['description']) && !empty($_POST['skills']))
             {
-                $stmt = $dbh->prepare("INSERT INTO jobadvert (wording, description, skills, idDomain, idEnigme)
+                $stmt = $dbh->prepare("INSERT INTO jobadvert (wording, description, skills, idDomain, idRiddle)
                 VALUES (:wording , :description , :skills, :domain, :enigme)");
-                var_dump(array(':wording' => $_POST['wording'],':description' => $_POST['description'], ':domain' => $_POST['domain'], ':enigme' => $_POST['enigme']));
-                $stmt->execute(array(':wording' => $_POST['wording'],':description' => $_POST['description'], ':domain' => $_POST['domain'], ':enigme' => $_POST['enigme']));
+                $stmt->execute(array(':wording' => $_POST['wording'],':description' => $_POST['description'], ':skills' => $_POST['skills'], ':domain' => $_POST['domain'], ':enigme' => $_POST['enigme']));
                 //echo"<script> alert('done.'); </script>";
             }
             else{
