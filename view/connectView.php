@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 
-//se connecter à la base de données 
+//se connecter à la base de données
  include "../function/connexion.php" ;
 
 ?>
@@ -41,13 +41,12 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" style="background: aliceblue;">
 	<?php
 		session_start();
 		if(ISSET($_POST['connect'])){
 			$email=$_POST['email'];
 			$pwd=$_POST['pwd'];
-			
 			if(empty($email) || empty($pwd)){
 				echo"Veuillez remplir le login ou le mot de passe";
 			}else{
@@ -68,22 +67,29 @@
 			}
 		}
 		?>
-	
+
 						<!--Formulaire de connexion-->
-						<h1></h1>
-						<hr/>
-						<div class="col-xs-8 col-sm-8 col-sm-offset-3">
+          <p><a href="http://enigma-gfi.com" style="font-family: Lato;
+    margin: 20px;">Accueil</a> > Connexion</p>
+            <img src="../web/img/logo-enigma.png" width="100" style="margin: auto;
+    display: block;margin-top: 50px;">
+						<h1 style="display: block;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 20px;font-family:Lato;">Connexion</h1>
+						<div style="background-color:aliceblue;width: 50%;
+    margin: auto;">
 							<form name="login" class="form-horizontal" method="post" accept-charset="utf-8">
 								<div class="form-group">
 									<div class="col-md-9">
 										<input name="email" placeholder="Idenfiant" class="form-control" type="text" id="UserUsername"/>
 									</div>
-								</div> 
+								</div>
 								<div class="form-group">
 									<div class="col-md-9">
 										<input name="pwd"  placeholder="Mot de passe" class="form-control" type="password" id="UserPassword"/>
 									</div>
-								</div> 
+								</div>
 								<div class="form-group">
 									<div class="col-md-offset-0 col-md-9 ">
 										<input name="connect"  class="btn btn-success btn btn-success pull-right" type="submit" value="Connexion"/>
@@ -91,8 +97,8 @@
 								</div>
 							</form>
 						</div>
-					</div>	
-			</div>	
+					</div>
+			</div>
 <!--footer start from here-->
 <footer>
   <div class="container">
