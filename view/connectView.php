@@ -62,6 +62,7 @@
 					$_SESSION['nom']=$name['firstname'];
 					$_SESSION['prenom']=$name['lastname'];
 					$_SESSION['id']=$name['id'];
+                    $_SESSION['admin'] = $name['admin'];
                                         if($name['idadmin']==1){
                                             header("Location: applicantView.php");
                                         }else{

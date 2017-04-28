@@ -56,7 +56,7 @@ background: rgba(0, 0, 0, 0.1);
     height: 100%;">
 
     <div>
-      <a href="http://enigma-gfi.com" style="display: block;
+      <a href="../" style="display: block;
     width: 240px;
     height: 95px;border-radius:50px;" class="profil-home"></a>
     </div>

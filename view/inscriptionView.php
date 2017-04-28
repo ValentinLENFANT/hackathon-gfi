@@ -3,9 +3,6 @@
 
 //se connecter à la base de données
  include "../function/connexion.php" ;
-include "../function/outsourcing.php";
-include "../function/jobAdvert.php";
-include "../function/riddle.php";
 
 ?>
 <!DOCTYPE html>
