@@ -4,7 +4,7 @@
 
 function displayTheRiddle()
 {
-    echo "<img src=../riddle/firstRiddle.png>";
+    echo "<img src=../riddle/firstRiddle.png style='width:90%;margin:auto;display:block;margin-top:40px;'>";
     echo "<br><br>Vous pensez avoir trouvé le numéro ? Entrez-le dans le champ ci-dessous pour vérifier ! <br><br>";
     echo "<input type='text'>";
     echo "<input type='submit' onclick='checkPhoneNumber()'>";
