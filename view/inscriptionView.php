@@ -3,6 +3,9 @@
 
 //se connecter à la base de données
  include "../function/connexion.php" ;
+include "../function/outsourcing.php";
+include "../function/jobAdvert.php";
+include "../function/riddle.php";
 
 ?>
 <!DOCTYPE html>
@@ -48,9 +51,9 @@
             if(isset($_POST['name'])){
                $name = explode(" ", $_POST['name']);
                if(isset($name[0])){
-                    $firtname = $name[0];
+                    $firstname = $name[0];
                }else{
-                    $firtname= '';
+                    $firstname= '';
                }
                if(isset($name[1])){
                    $lastname = $name[1];
@@ -58,7 +61,7 @@
                     $lastname= '';
                }
             }else{
-               $firtname= '';
+               $firstname= '';
                $lastname= '';
             }
            $pattern = '#^(?=.*[a-z])||(?=.*[A-Z])||(?=.*[0-9])||(?=.*\W)#';
@@ -90,8 +93,8 @@
                    if(empty($err)){
                         $stmt = $dbh->prepare("INSERT INTO applicant (firstname, lastname, email, pwd)
                         VALUES (:firstname , :lastname , :email , SHA1(:pwd))");
-                        $stmt->execute(array(':firstname' => $firtname,':lastname' => $lastname, ':email' => $_POST['email'], ':pwd' => $_POST['pwd']));
-                        $_SESSION['nom']=$firtname;
+                        $stmt->execute(array(':firstname' => $firstname,':lastname' => $lastname, ':email' => $_POST['email'], ':pwd' => $_POST['pwd']));
+                        $_SESSION['nom']=$firstname;
                         $_SESSION['prenom']=$lastname;
                         header("Location: applicantView.php");
                     }else{

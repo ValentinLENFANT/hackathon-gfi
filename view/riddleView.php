@@ -2,7 +2,10 @@
 <?php
 
 //se connecter à la base de données 
- include "../function/connexion.php" ;
+include "../function/connexion.php" ;
+//include "../function/outsourcing.php";
+//include "../function/jobAdvert.php";
+//include "../function/riddle.php";
 
 ?>
 <!DOCTYPE html>
@@ -92,9 +95,22 @@
 			$stmt->execute();	
 			echo"<table class='table '><tbody><tr class='active'><th>Nom d'enigme</th><th>Contenu</th><th>Secteur d'activité</th>
 			</tr>";
-			while($req=$stmt->fetch()){				
-                            echo "<tr><td>".$req['name']."</td>
-                            <td>".$req['content']."</td><td>".$req['wd']."</td></tr>";
+            echo "<td>PHPWars</td>";
+            ?>
+            <td><a href='../function/riddle.php'>Echo me the riddle!</a></td>
+            <?php
+            echo "<td>Développement Web</td>";
+            echo'<tr>';
+            echo "<td>C-world</td>";
+            ?>
+            <td><a href='../function/riddle.php'>Print me the riddle!</a></td>
+            <?php
+            echo "<td>Développement C++</td>";
+            echo'</tr>';
+            $dictionarySkills = ['php', 'html', 'css', 'javascript', 'jquery', 'symfony'];
+            //$riddle = getTheRiddle($dictionarySkills);
+			while($req=$stmt->fetch()){
+                            echo"<tr><td>Test</td></tr>";
                         }
 			echo"</tbody></table>";
                     ?>
