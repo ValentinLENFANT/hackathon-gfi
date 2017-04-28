@@ -47,15 +47,18 @@
 		if(ISSET($_POST['connect'])){
 			$email=$_POST['email'];
 			$pwd=$_POST['pwd'];
+                       // echo $pwd;
 			if(empty($email) || empty($pwd)){
 				echo"Veuillez remplir le login ou le mot de passe";
 			}else{
 				$stmt=$dbh->prepare("select id, firstname , lastname, admin from applicant where email=:email and pwd=SHA1(:pwd);");
 				$stmt->bindParam(':email', $email);
 				$stmt->bindParam(':pwd', $pwd);
+                               // var_dump(SHA1($pwd));
 				$stmt->execute();
 				$name = $stmt->fetch();
-				if(!$name==null){
+                                var_dump($name);
+				if($name!=null){
 					$_SESSION['nom']=$name['firstname'];
 					$_SESSION['prenom']=$name['lastname'];
 					$_SESSION['id']=$name['id'];
