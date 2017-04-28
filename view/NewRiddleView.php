@@ -89,7 +89,7 @@
         if(ISSET($_POST['valider'])){
             if(!empty($_POST['name']) && !empty($_POST['content']) && !empty($_POST['domain']))
             {
-                $stmt = $dbh->prepare("INSERT INTO riddle (name, content, idDoamin)
+                $stmt = $dbh->prepare("INSERT INTO riddle (name, content, idDomain)
                 VALUES (:name , :content , :domain)");
                 $stmt->execute(array(':name' => $_POST['name'],':content' => $_POST['content'], ':domain' => $_POST['domain']));
                 echo"<script> alert('done.'); </script>";
