@@ -106,7 +106,8 @@
     ?>
     <div class="">
                             <div class="form-group" style="width: 50%;
-    margin: auto;"><img src="../web/img/logo-enigma.png" width="100" style="margin: auto;
+    margin: auto;">       <p><a href="http://enigma-gfi.com" style="font-family: Lato;
+    margin: 20px;">Accueil</a> > Connexion</p><img src="../web/img/logo-enigma.png" width="100" style="margin: auto;
     display: block;">
                             <!-- formulaire d'ajout d'une entreprise -->
                                     <form method="post" class="form-horizontal">
