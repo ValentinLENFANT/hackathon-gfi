@@ -50,7 +50,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="view/connectView.php" style="border: 1px white solid;padding-top: 2px;padding-bottom: 2px;margin-top: 12px;margin-right: 20px;">Connexion</a>
+                        <a class="page-scroll" href="view/connectView.php" style="border: 0px white solid;padding-top: 2px;padding-bottom: 2px;margin-top: 12px;margin-right: 20px;">Connexion</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="view/inscriptionView.php" style="border: 1px white solid;padding-top: 2px;padding-bottom: 2px;margin-top: 12px;margin-right: 20px;">S'inscrire</a>
@@ -67,7 +67,7 @@
 
     <header>
         <div class="header-content">
-            <img src="web/img/logo.png" class="img-responsive centree" alt="logo enigma">
+            <img src="web/img/logo.png" class="img-responsive centree" alt="logo enigma" style="width:50%;">
             <a href="#" class="btn btn-lg btn-default video" style="border-radius:300px;border-radius: 300px;background: transparent;border: 1px solid white;color: white;"><span class="glyphicon glyphicon-play"></span>  Lire la vidéo</a>
         </div>
     </header>
@@ -79,7 +79,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: #f59331;font-size: 70px;font-family:Lato;">EXPERT EN FINANCE</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
+                    <h2 class="section-heading" style="color: #f59331;font-size: 70px;font-family:Lato;">MAGICIEN DE LA FINANCE</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
                     <hr class="light">
                 </div>
             </div>
@@ -113,7 +113,7 @@ Prêt ? Alors à vos baguettes !</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: white;font-size: 70px;font-family:Lato;">EXPERT EN RH</h2><h3 style="margin: 0px auto;
+                    <h2 class="section-heading" style="color: white;font-size: 70px;font-family:Lato;">DIEU DE LA RH</h2><h3 style="margin: 0px auto;
     color: #f5f5f5;
     font-family: Lato;
     display: initial;
@@ -156,7 +156,7 @@ Prêt ? Montez sur votre chameau, c’est parti !</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: #f59331;font-size: 3.2em;font-family:Lato;">EXPERT COMMERCIAL</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
+                    <h2 class="section-heading" style="color: #f59331;font-size: 3.2em;font-family:Lato;">EXPLORATEUR DU COMMERCE</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
                     <hr class="light">
                 </div>
             </div>
@@ -190,7 +190,7 @@ Prêt ? Brandissez votre lasso, direction l’expédition !</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: white;font-size: 70px;font-family:Lato;">EXPERT DES LETTRES</h2><h3 style="margin: 0px auto;
+                    <h2 class="section-heading" style="color: white;font-size: 70px;font-family:Lato;">AGENT DE LA COM</h2><h3 style="margin: 0px auto;
     color: #f5f5f5;
     font-family: Lato;
     display: initial;
@@ -233,7 +233,7 @@ Prêt ? Que la missions d’espionnage commence !</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: #f59331;font-size:4.2em;font-family:Lato;">EXPERT EN CONSEIL</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
+                    <h2 class="section-heading" style="color: #f59331;font-size:4.2em;font-family:Lato;">CAPITAINE DU CONSEIL</h2><h3 style="margin: 0px;color: #9c9d9d;font-family: Lato;">Rejoignez l'aventure</h3>
                     <hr class="light">
                 </div>
             </div>

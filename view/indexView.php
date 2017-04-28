@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="<?php echo Router::getUrl("applicant", "connect"); ?>">Connexion</a>
+                        <a class="page-scroll" style="border:initial;" href="<?php echo Router::getUrl("applicant", "connect"); ?>">Connexion</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="<?php echo Router::getUrl("applicant", "inscrire"); ?>" style="border: 1px white solid;padding-top: 2px;padding-bottom: 2px;margin-top: 12px;margin-right: 20px;">S'inscrire</a>
@@ -28,7 +28,7 @@
     </nav>
     <header>
         <div class="header-content">
-            <img src="media/img/logo.png" class="img-responsive centree" alt="logo enigma">
+            <img src="media/img/logo.png" class="img-responsive centree" alt="logo enigma" >
             <a href="#" class="btn btn-lg btn-default video" style="border-radius:300px;border-radius: 300px;background: transparent;border: 1px solid white;color: white;"><span class="glyphicon glyphicon-play"></span>  Lire la vidéo</a>
         </div>
     </header>

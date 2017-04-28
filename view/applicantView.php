@@ -62,6 +62,11 @@ background: rgba(0, 0, 0, 0.1);
     </div>
 
     <div>
+      <a href="http://enigma-gfi.com" style="display: block;
+    width: 240px;
+    height: 95px;border-radius:50px;" class="profil-home"></a>
+    </div>
+    <div>
       <a href="http://enigma-gfi.com/function/deconnexion.php
 " class="profil-home" style="display:block;
     width: 258px;
