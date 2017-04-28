@@ -37,10 +37,7 @@ function findJobAdvert($dictionarySkills)
             }
         }
         $numberOfSkillsRequiredForAJob = count(explode(',', $requiredSkillsForJobAdvert[$i])) - 1;
-        echo "The score is : " . $score . "<br>";
-        echo "The number of total skills is " . $numberOfSkillsRequiredForAJob . "<br>";
         $matchingRate[$i] = [substr($requiredSkillsForJobAdvert[$i], 0, 1) => $score / $numberOfSkillsRequiredForAJob];
-        echo "The matching rate is " . $score / $numberOfSkillsRequiredForAJob . "<br><br>";
     }
     $bestJobAdvert = array();
     foreach ($matchingRate as $index => $value) {
