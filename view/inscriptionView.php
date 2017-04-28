@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Page d'accueil GFI</title>
+    <title>Enregistrement</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../web/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -106,16 +106,17 @@
     ?>
     <div class="">
                             <div class="form-group" style="width: 50%;
-    margin: auto;">
+    margin: auto;"><img src="../web/img/logo-enigma.png" width="100" style="margin: auto;
+    display: block;">
                             <!-- formulaire d'ajout d'une entreprise -->
                                     <form method="post" class="form-horizontal">
                                             <fieldset>
-                                                    <legend>Inscription</legend>
-                                                    <label>Nom prénom </label><input type="text" id="name" class="form-control" name="name" placeholder=""/>
-                                                    <label>email</label><input type="text" id="email" class="form-control" name="email" placeholder=""/>
-                                                    <label>Mot de passe</label><input type="password" id="pwd" class="form-control" name="pwd" placeholder=""/>
-                                                    <label>Confirmer</label><input name="confirm" id="telephone" class="form-control" placeholder=""/>
-                                                    <label>Uploader votre CV</label><input type="file" id="cv" class="form-control" name="cv" placeholder=""/>
+                                                    <legend style="font-family:Lato;">Inscription</legend>
+                                                    <label style="font-family:Lato;">Nom et prénom </label><input type="text" id="name" class="form-control" name="name" placeholder=""/>
+                                                    <label style="font-family:Lato;">Email</label><input type="text" id="email" class="form-control" name="email" placeholder=""/>
+                                                    <label style="font-family:Lato;">Mot de passe</label><input type="password" id="pwd" class="form-control" name="pwd" placeholder=""/>
+                                                    <label style="font-family:Lato;">Confirmer</label><input name="confirm" id="telephone" class="form-control" placeholder=""/>
+                                                    <label style="font-family:Lato;">Uploader votre CV</label><input type="file" id="cv" class="form-control" name="cv" placeholder=""/>
                                             </fieldset>
                                             <div class="top" style="margin-top: 20px;">
                                                     <button type="submit" class="btn btn-primary " onclick="resetFields()" value="annuler" name="delete">Annuler    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
