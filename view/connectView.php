@@ -27,7 +27,7 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="web//vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="../web/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="../web/css/creative.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 			if(empty($email) || empty($pwd)){
 				echo"Veuillez remplir le login ou le mot de passe";
 			}else{
-				$stmt=$dbh->prepare("select id, firstname , lastname from applicant where email=:email and pwd=SHA1(:pwd);");
+				$stmt=$dbh->prepare("select id, firstname , lastname, admin from applicant where email=:email and pwd=SHA1(:pwd);");
 				$stmt->bindParam(':email', $email);
 				$stmt->bindParam(':pwd', $pwd);
 				$stmt->execute();
@@ -59,7 +59,11 @@
 					$_SESSION['nom']=$name['firstname'];
 					$_SESSION['prenom']=$name['lastname'];
 					$_SESSION['id']=$name['id'];
-					header("Location: applicantView.php");
+                                        if($name['idadmin']==1){
+                                            header("Location: applicantView.php");
+                                        }else{
+                                            header("Location: riddleView.php");
+                                        }
 				}
 				else{
 					echo "<script>alert('Login ou mot de passe érroné');</script>";

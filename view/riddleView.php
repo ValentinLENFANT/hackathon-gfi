@@ -61,10 +61,10 @@
     ?>
     <div class="container">
         <div class="row">
-                                <div class="form-group">
+                <div class="form-group">
                                 <!-- formulaire d'ajout d'une entreprise -->
-                                        <form method="post" class="form-horizontal">
-                                                <fieldset>
+                                <form method="post" class="form-horizontal">
+                                      <fieldset>
                                                         <legend>Ajouter un enigme</legend>
                                                         <label>Nom</label><input type="text" id="name" class="form-control" name="name" placeholder=""/>
                                                         <label>Contenu</label><input type="text" id="email" class="form-control" name="email" placeholder=""/>
