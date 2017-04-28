@@ -58,6 +58,7 @@
 
 
             <span class="caret"></span></a>
+
 			<ul class="dropdown-menu">
                             <li><a href="NewAdvert.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter une offre</a></li>
                             <li><a href="riddleView.php"><span class="glyphicon glyphicon-briefcase"></span>Consulter les offres</a></li>
