@@ -91,7 +91,9 @@
                         $stmt = $dbh->prepare("INSERT INTO applicant (firstname, lastname, email, pwd)
                         VALUES (:firstname , :lastname , :email , SHA1(:pwd))");
                         $stmt->execute(array(':firstname' => $firtname,':lastname' => $lastname, ':email' => $_POST['email'], ':pwd' => $_POST['pwd']));
-                        echo"<script> alert('done.'); </script>";
+                        $_SESSION['nom']=$firtname;
+                        $_SESSION['prenom']=$lastname;
+                        header("Location: applicantView.php");
                     }else{
                         foreach($err as $er){
                             echo $er;
