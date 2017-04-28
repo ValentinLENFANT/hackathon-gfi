@@ -42,7 +42,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-#profil-home:hover{
+.profil-home:hover{
 background: rgba(0, 0, 0, 0.1);
 }
 
@@ -63,9 +63,22 @@ background: rgba(0, 0, 0, 0.1);
 
     <div>
       <a href="http://enigma-gfi.com/function/deconnexion.php
-" class="profil-home" style="display: block;
-    width: 240px;background-color:black;
-    height: 95px;"></a>
+" class="profil-home" style="display:block;
+    width: 258px;
+    height: 43px;
+    position: relative;
+    top: 414px;"></a>
     </div>
+
+    <div>
+      <a href="http://enigma-gfi.com/function/riddle.php
+" class="" style="display: block;
+    height: 518px;
+    position: relative;
+    top: 100px;
+    left: 369px;
+    width: 920px;"></a>
+    </div>
+
 </div>
 <?php
