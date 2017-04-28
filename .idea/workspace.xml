@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1d751e5-56cb-40f3-aefe-b32c966d9217" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/NewRiddleView.php" afterPath="$PROJECT_DIR$/view/NewRiddleView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/riddleView.php" afterPath="$PROJECT_DIR$/view/riddleView.php" />
     </list>
     <ignored path="hackathon-gfi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewRiddleView.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewRiddleView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/NewRiddleView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="91" column="82" selection-start-line="91" selection-start-column="82" selection-end-line="91" selection-end-column="82" />
+            <state relative-caret-position="510">
+              <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
               <folding>
                 <marker date="1493366830010" expanded="true" signature="3425:3941" ph="..." />
                 <marker date="1493366830010" expanded="true" signature="3448:3936" ph="..." />
@@ -85,37 +85,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="riddleView.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="riddleView.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/riddleView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+            <state relative-caret-position="382">
+              <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
               <folding>
-                <marker date="1493362840206" expanded="true" signature="3010:3526" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="3033:3521" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="3175:3223" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="3255:3509" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="4082:4180" ph="SELECT name riddle" />
-                <marker date="1493362840206" expanded="true" signature="4235:4334" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="4242:4334" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="4261:4334" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="4925:4985" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="5219:7161" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="5245:7144" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="5267:7135" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="5317:5681" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="5737:6010" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="5809:5997" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="6066:6323" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="6158:6310" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="6379:7124" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="6632:7111" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="6678:7096" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="7216:7668" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="7242:7661" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="7269:7381" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="7408:7652" ph="..." />
-                <marker date="1493362840206" expanded="true" signature="7464:7641" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="3010:3526" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="3033:3521" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="3175:3223" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="3255:3509" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="4082:4180" ph="SELECT name riddle" />
+                <marker date="1493367053263" expanded="true" signature="4235:4334" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="4242:4334" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="4261:4334" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="4956:6898" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="4982:6881" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="5004:6872" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="5054:5418" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="5474:5747" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="5546:5734" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="5803:6060" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="5895:6047" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="6116:6861" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="6369:6848" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="6415:6833" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="6953:7405" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="6979:7398" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="7006:7118" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="7145:7389" ph="..." />
+                <marker date="1493367053263" expanded="true" signature="7201:7378" ph="..." />
               </folding>
             </state>
           </provider>
@@ -202,9 +201,9 @@
         <option value="$PROJECT_DIR$/function/connexion.php" />
         <option value="$PROJECT_DIR$/view/inscriptionView.php" />
         <option value="$PROJECT_DIR$/function/jobAdvert.php" />
-        <option value="$PROJECT_DIR$/view/riddleView.php" />
         <option value="$PROJECT_DIR$/view/newAdvert.php" />
         <option value="$PROJECT_DIR$/view/NewRiddleView.php" />
+        <option value="$PROJECT_DIR$/view/riddleView.php" />
       </list>
     </option>
   </component>
@@ -372,12 +371,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493329326203</updated>
-      <workItem from="1493329329109" duration="18636000" />
+      <workItem from="1493329329109" duration="18871000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18636000" />
+    <option name="totallyTimeSpent" value="18871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -528,40 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/riddleView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
-          <folding>
-            <marker date="1493362840206" expanded="true" signature="3010:3526" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="3033:3521" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="3175:3223" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="3255:3509" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="4082:4180" ph="SELECT name riddle" />
-            <marker date="1493362840206" expanded="true" signature="4235:4334" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="4242:4334" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="4261:4334" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="4925:4985" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="5219:7161" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="5245:7144" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="5267:7135" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="5317:5681" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="5737:6010" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="5809:5997" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="6066:6323" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="6158:6310" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="6379:7124" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="6632:7111" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="6678:7096" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="7216:7668" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="7242:7661" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="7269:7381" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="7408:7652" ph="..." />
-            <marker date="1493362840206" expanded="true" signature="7464:7641" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/newAdvert.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -582,8 +547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/NewRiddleView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="91" column="82" selection-start-line="91" selection-start-column="82" selection-end-line="91" selection-end-column="82" />
+        <state relative-caret-position="510">
+          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
           <folding>
             <marker date="1493366830010" expanded="true" signature="3425:3941" ph="..." />
             <marker date="1493366830010" expanded="true" signature="3448:3936" ph="..." />
@@ -591,6 +556,39 @@
             <marker date="1493366830010" expanded="true" signature="3670:3924" ph="..." />
             <marker date="1493366830010" expanded="true" signature="4300:4396" ph="INSERT INTO riddle... " />
             <marker date="1493366830010" expanded="true" signature="5689:5709" ph="select * fro... domain" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/riddleView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
+          <folding>
+            <marker date="1493367053263" expanded="true" signature="3010:3526" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="3033:3521" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="3175:3223" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="3255:3509" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="4082:4180" ph="SELECT name riddle" />
+            <marker date="1493367053263" expanded="true" signature="4235:4334" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="4242:4334" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="4261:4334" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="4956:6898" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="4982:6881" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="5004:6872" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="5054:5418" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="5474:5747" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="5546:5734" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="5803:6060" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="5895:6047" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="6116:6861" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="6369:6848" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="6415:6833" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="6953:7405" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="6979:7398" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="7006:7118" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="7145:7389" ph="..." />
+            <marker date="1493367053263" expanded="true" signature="7201:7378" ph="..." />
           </folding>
         </state>
       </provider>

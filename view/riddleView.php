@@ -107,11 +107,6 @@ include "../function/connexion.php" ;
             <?php
             echo "<td>Développement C++</td>";
             echo'</tr>';
-            $dictionarySkills = ['php', 'html', 'css', 'javascript', 'jquery', 'symfony'];
-            //$riddle = getTheRiddle($dictionarySkills);
-			while($req=$stmt->fetch()){
-                            echo"<tr><td>Test</td></tr>";
-                        }
 			echo"</tbody></table>";
                     ?>
 		</div>
