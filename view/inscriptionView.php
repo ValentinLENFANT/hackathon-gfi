@@ -104,24 +104,26 @@
          
         }
     ?>
-    <div class="">
-                            <div class="form-group">
-                            <!-- formulaire d'ajout d'une entreprise -->
-                                    <form method="post" class="form-horizontal">
-                                            <fieldset>
-                                                    <legend>Inscription</legend>
-                                                    <label>Nom prénom </label><input type="text" id="name" class="form-control" name="name" placeholder=""/>
-                                                    <label>email</label><input type="text" id="email" class="form-control" name="email" placeholder=""/>
-                                                    <label>Mot de passe</label><input type="password" id="pwd" class="form-control" name="pwd" placeholder=""/>
-                                                    <label>Confirmer</label><input name="confirm" id="telephone" class="form-control" placeholder=""/>
-                                                    <label>Uploader votre CV</label><input type="file" id="cv" class="form-control" name="cv" placeholder=""/>
-                                            </fieldset>
-                                            <div class="top">
-                                                    <button type="submit" class="btn btn-primary " onclick="resetFields()" value="annuler" name="delete">Annuler    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
-                                                    <button type="submit" class="btn btn-primary pull-right" value="valider" name="valider">Confirmer    <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span></button>	
-                                            </div>
-                                    </form>
-                            </div>							
+    <div class="container">
+        <div class="row">
+                                <div class="form-group">
+                                <!-- formulaire d'ajout d'une entreprise -->
+                                        <form method="post" class="form-horizontal">
+                                                <fieldset>
+                                                        <legend>Inscription</legend>
+                                                        <label>Nom prénom </label><input type="text" id="name" class="form-control" name="name" placeholder=""/>
+                                                        <label>email</label><input type="text" id="email" class="form-control" name="email" placeholder=""/>
+                                                        <label>Mot de passe</label><input type="password" id="pwd" class="form-control" name="pwd" placeholder=""/>
+                                                        <label>Confirmer</label><input name="confirm" id="telephone" class="form-control" placeholder=""/>
+                                                        <label>Uploader votre CV</label><input type="file" id="cv" class="form-control" name="cv" placeholder=""/>
+                                                </fieldset>
+                                                <div class="top">
+                                                        <button type="submit" class="btn btn-primary " onclick="resetFields()" value="annuler" name="delete">Annuler    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
+                                                        <button type="submit" class="btn btn-primary pull-right" value="valider" name="valider">Confirmer    <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span></button>	
+                                                </div>
+                                        </form>
+                                </div>							
+        </div>	
     </div>	
 </div>	
 <!--footer start from here-->
