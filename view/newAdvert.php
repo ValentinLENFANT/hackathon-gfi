@@ -43,7 +43,7 @@
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+        <nav class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li role="presentation" class="dropdown">
@@ -51,6 +51,13 @@
 			<ul class="dropdown-menu">
                             <li><a href="NewRiddleView.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter un enigme</a></li>
                             <li><a href="riddleView.php"><span class="glyphicon glyphicon-briefcase"></span>Consulter les enigmes</a></li>
+			</ul>
+    </li>
+      <li role="presentation" class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Offres<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+                            <li><a href="NewAdvert.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter une offre</a></li>
+                            <li><a href="riddleView.php"><span class="glyphicon glyphicon-briefcase"></span>Consulter les offres</a></li>
 			</ul>
     </li>
     </ul>
@@ -71,40 +78,70 @@
 						<li><a href='../function/deconnexion.php'><span class='glyphicon glyphicon-off' aria-hidden='true'></span>	Déconnexion</a></li>
 					</ul>
 					</div></td></tr></table></form>";
-				?>
+		?>
       </div>
     </div>
   </div>
 </nav>
     <div class="top">
-<div class="container">
-<div class="row">
-   <div class="panel-body">
-	<div class="panel panel-primary">
-            <div class="panel-heading">
-		<h3 class="panel-title"> Liste des enigmes </h3>
-            </div>
-	    <!--L'affichage des étudiants sauvegardés dans la base de données, je récupére les données et je les affiche sous forme d'un tableau.-->
-            <div class="panel-body">
-		<div class="table-responsive">
-		    <?php
-			$stmt=$dbh->prepare("SELECT name , content, domain.wording  as wd FROM riddle, domain where domain.id = riddle.idDomain");
-			$stmt->execute();	
-			echo"<table class='table '><tbody><tr class='active'><th>Nom d'enigme</th><th>Contenu</th><th>Secteur d'activité</th>
-			</tr>";
-			while($req=$stmt->fetch()){				
-                            echo "<tr><td>".$req['name']."</td>
-                            <td>".$req['content']."</td><td>".$req['wd']."</td></tr>";
-                        }
-			echo"</tbody></table>";
-                    ?>
-		</div>
-	    </div>
-	</div>
-  </div>
-	    </div>
-	</div>
-  </div>
+    <?php
+        //Sauvegarder une nouvelle entreprise dans la base de données.
+        if(ISSET($_POST['valider'])){
+            if(!empty($_POST['wording']) && !empty($_POST['description']) && !empty($_POST['skills']))
+            {
+                $stmt = $dbh->prepare("INSERT INTO jobadvert (wording, description, skills, idDomain, idEnigme)
+                VALUES (:wording , :description , :skills, :domain, :enigme)");
+                var_dump(array(':wording' => $_POST['wording'],':description' => $_POST['description'], ':domain' => $_POST['domain'], ':enigme' => $_POST['enigme']));
+                $stmt->execute(array(':wording' => $_POST['wording'],':description' => $_POST['description'], ':domain' => $_POST['domain'], ':enigme' => $_POST['enigme']));
+                //echo"<script> alert('done.'); </script>";
+            }
+            else{
+                echo"<script> alert('Tous les champs sont obligatoires.'); </script>";
+            }
+         
+        }
+    ?>
+    <div class="container">
+        <div class="row">
+                <div class="form-group">
+                                <!-- formulaire d'ajout d'une entreprise -->
+                                <form method="post" class="form-horizontal">
+                                      <fieldset>
+                                                        <legend>Ajouter une offre</legend>
+                                                        <label>Intitulé</label><input type="text" id="wording" class="form-control" name="wording" placeholder=""/>
+                                                        <label>Description</label><input type="text" id="description" class="form-control" name="description" placeholder=""/>
+                                                        <label>Compétences</label><input type="text" id="skills" class="form-control" name="skills" placeholder=""/>
+                                                        <label>Secteur d'activité</label>
+                                                        <?php
+                                                               $stmtt=$dbh->prepare("select * from domain;");
+                                                               $stmtt->execute();
+                                                        ?>
+                                                        <select name="domain">
+                                                            <?php while($req=$stmtt->fetch()){ ?>
+                                                                 <option value="<?php echo $req['id'] ?>"><?php echo $req['wording']; ?></option>
+                                                            <?php } ?>
+                                                        </select>
+                                                        <label>L'enigme ciblé</label>
+                                                        <?php
+                                                               $st=$dbh->prepare("select * from riddle;");
+                                                               $st->execute();
+                                                        ?>
+                                                        <select name="enigme">
+                                                            <?php while($req=$st->fetch()){ ?>
+                                                                 <option value="<?php echo $req['id'] ?>"><?php echo $req['name']; ?></option>
+                                                            <?php } ?>
+                                                        </select>
+                                                       
+                                                </fieldset>
+                                                <div class="top">
+                                                        <button type="submit" class="btn btn-primary " onclick="resetFields()" value="annuler" name="delete">Annuler    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
+                                                        <button type="submit" class="btn btn-primary pull-right" value="valider" name="valider">Confirmer    <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span></button>	
+                                                </div>
+                                        </form>
+                                </div>							
+        </div>	
+    </div>	
+</div>	
 <!--footer start from here-->
 <footer style="margin-top: 50%">
   <div class="container">
@@ -145,7 +182,6 @@
       </div>
     </div>
   </div>
-</div>
 </footer>
 <!--footer start from here-->
 
