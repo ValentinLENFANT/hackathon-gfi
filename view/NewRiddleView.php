@@ -49,12 +49,15 @@
       <li role="presentation" class="dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Enigmes<span class="caret"></span></a>
 			<ul class="dropdown-menu">
-                            <li><a href="NewRiddleView.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter un enigme</a></li>
+                            <li><a href="NewRiddleView.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter une enigme</a></li>
                             <li><a href="riddleView.php"><span class="glyphicon glyphicon-briefcase"></span>Consulter les enigmes</a></li>
 			</ul>
     </li>
       <li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Offres<span class="caret"></span></a>
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+
+
+            <span class="caret"></span></a>
 			<ul class="dropdown-menu">
                             <li><a href="NewAdvert.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter une offre</a></li>
                             <li><a href="riddleView.php"><span class="glyphicon glyphicon-briefcase"></span>Consulter les offres</a></li>

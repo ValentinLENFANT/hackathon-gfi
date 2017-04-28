@@ -48,15 +48,22 @@ include "../function/connexion.php" ;
 <body id="page-top">
     <nav class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
   <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Enigmes<span class="caret"></span></a>
-			<ul class="dropdown-menu">
-                            <li><a href="NewRiddleView.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter un enigme</a></li>
-                            <li><a href="riddleView.php"><span class="glyphicon glyphicon-briefcase"></span>Consulter les enigmes</a></li>
-			</ul>
-    </li>
-    </ul>
+      <ul class="nav navbar-nav">
+          <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Enigmes<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="NewRiddleView.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter une enigme</a></li>
+                  <li><a href="riddleView.php"><span class="glyphicon glyphicon-briefcase"></span>Consulter les enigmes</a></li>
+              </ul>
+          </li>
+          <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Offres <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="NewAdvert.php"> <span class="glyphicon glyphicon-plus-sign"></span>Ajouter une offre</a></li>
+                  <li><a href="riddleView.php"><span class="glyphicon glyphicon-briefcase"></span>Consulter les offres</a></li>
+              </ul>
+          </li>
+      </ul>
     <div class="navbar-form navbar-right inline-form">
       <div class="form-group">
         	<?php
