@@ -16,8 +16,7 @@ displayTheRiddle();
 
 <script>
 
-    function checkPhoneNumber()
-    {
+    function checkPhoneNumber() {
         alert("Bravo ! Vous avez trouvé le bon numéro de téléphone. Vous pouvez désormais nous appeler.");
     }
 
